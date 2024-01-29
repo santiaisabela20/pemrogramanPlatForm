@@ -1,0 +1,146 @@
+POST http://localhost:3000/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username" : "santia",
+  "password" : "rahasia",
+  "name" : "sntaisbl"
+}
+
+### 
+
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username" : "santia",
+  "password" : "rahasia"
+}
+
+###
+
+GET http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: f18fb4f2-5a40-47c0-bc51-a9e35c3f84ae
+
+###
+
+PATCH http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: f18fb4f2-5a40-47c0-bc51-a9e35c3f84ae
+
+{
+  "name" : "sntaisbl"
+}
+
+###
+
+DELETE http://localhost:3000/api/users/logout
+Content-Type: application/json
+Accept: application/json
+Authorization: f18fb4f2-5a40-47c0-bc51-a9e35c3f84ae
+
+###
+
+POST http://localhost:3000/api/contacts
+Content-Type: application/json
+Accept: application/json
+Authorization: f18fb4f2-5a40-47c0-bc51-a9e35c3f84ae
+
+{
+  "first_name" : "sari",
+  "last_name" : "Myana",
+  "email" : "sari@na.com",
+  "phone" : "085260619698"
+}
+
+###
+
+GET http://localhost:3000/api/contacts
+Content-Type: application/json
+Accept: application/json
+Authorization: f18fb4f2-5a40-47c0-bc51-a9e35c3f84ae
+
+###
+
+GET http://localhost:3000/api/contacts/2
+Content-Type: application/json
+Accept: application/json
+Authorization: f18fb4f2-5a40-47c0-bc51-a9e35c3f84ae
+
+### Update
+
+PUT http://localhost:3000/api/contacts/2
+Content-Type: application/json
+Accept: application/json
+Authorization: f18fb4f2-5a40-47c0-bc51-a9e35c3f84ae
+
+{
+    "first_name": "marii",
+    "last_name": "sana",
+    "email": "sina@na.com",
+    "phone": "085260618998"
+  }
+
+### Delete Contact
+
+DELETE http://localhost:3000/api/contacts/2
+Content-Type: application/json
+Accept: application/json
+Authorization: f18fb4f2-5a40-47c0-bc51-a9e35c3f84ae
+### Create Address
+
+POST http://localhost:3000/api/contacts/1/addresses
+Content-Type: application/json
+Accept: application/json
+Authorization: f18fb4f2-5a40-47c0-bc51-a9e35c3f84ae
+
+{
+  "street" : "rumah",
+  "city" : "tanggerang selatan",
+  "province" : "banten",
+  "country" : "Indonesia",
+  "postal_code" : "312112"
+}
+
+
+### List Addresses
+
+GET http://localhost:3000/api/contacts/1/addresses
+Content-Type: application/json
+Accept: application/json
+Authorization: f18fb4f2-5a40-47c0-bc51-a9e35c3f84ae
+
+
+### Get Address
+
+GET http://localhost:3000/api/contacts/1/addresses/1
+Content-Type: application/json
+Accept: application/json
+Authorization: f18fb4f2-5a40-47c0-bc51-a9e35c3f84ae
+
+### Update Address
+
+PUT http://localhost:3000/api/contacts/1/addresses/2
+Content-Type: application/json
+Accept: application/json
+Authorization: f18fb4f2-5a40-47c0-bc51-a9e35c3f84ae
+
+{
+  "street" : "rumah Bekerja",
+  "city" : "jakarta",
+  "province" : "Dki Jakarta",
+  "country" : "Indonesia",
+  "postal_code" : "312112"
+}
+
+### Remove Address
+
+DELETE http://localhost:3000/api/contacts/1/addresses/2
+Content-Type: application/json
+Accept: application/json
+Authorization: f18fb4f2-5a40-47c0-bc51-a9e35c3f84ae
